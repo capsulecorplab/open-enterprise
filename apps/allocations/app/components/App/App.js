@@ -53,27 +53,25 @@ const App = () => {
     })
   }
 
-
   const onNewAllocation = (address, description, id, balance) => {
-    // The whole entries vs entities thing needs to be fixed; these are too close
-    //const userEntity = {addr: '0x8401Eb5ff34cc943f096A32EF3d5113FEbE8D4Eb', data: {entryAddress: '0x8401Eb5ff34cc943f096A32EF3d5113FEbE8D4Eb', name: 'Bob', entryType: 'user'}}
-    const promptEntity = {
-      addr: 0x0,
-      data: { entryAddress: 0x0, name: 'Select an entry', entryType: 'prompt' },
-    }
-
-    const entities = [promptEntity].concat(entries.sort(nameSorter))
+    // variable examples, remove this
+    const budgetList = [ 'Hacktivism', 'Marketing' ]
+    const selectedBudget = 0
+    const budgetLimit = '200'
+    const fundsLimit = '300'
+    const currency = 'ETH'
     setPanel({
       content: NewAllocation,
       data: {
-        heading: 'New Allocation',
-        subHeading: description,
-        address,
-        balance,
-        balances,
-        entities,
         id,
+        heading: 'New allocation',
         onSubmitAllocation,
+        budgetList,
+        selectedBudget,
+        budgetLimit,
+        fundsLimit,
+        description,
+        currency,
       },
     })
   }
