@@ -87,7 +87,7 @@ export const handleEvent = async (state, action, vaultAddress, vaultContract) =>
     let issueData = await loadIssueData({ repoId, issueNumber })
     issueData = { ...issueData, ...ipfsData }
     issueData = determineWorkStatus(issueData)
-    return syncIssues(state, returnValues, issueData, [])
+    return syncIssues(state, returnValues, issueData)
   }
   case ASSIGNMENT_REQUESTED: {
     if(!returnValues) return state

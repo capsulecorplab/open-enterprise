@@ -107,7 +107,7 @@ async function newBalanceEntry(tokenContract, tokenAddress, settings) {
     loadTokenDecimals(tokenContract, tokenAddress, settings),
     loadTokenName(tokenContract, tokenAddress, settings),
     loadTokenSymbol(tokenContract, tokenAddress, settings),
-    loadTokenStartBlock(tokenContract, tokenAddress, settings),
+    loadTokenStartBlock(tokenContract, tokenAddress),
   ])
 
   return {

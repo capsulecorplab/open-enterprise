@@ -20,7 +20,7 @@ export const getVoteStatus = (vote, globalMinQuorum) => {
 export const getTotalSupport = ({ options }) => {
   let totalSupport = 0
   options.forEach(option => {
-    totalSupport = totalSupport + parseFloat(option.value, 10)
+    totalSupport = totalSupport + parseFloat(option.value)
   })
   return totalSupport
 }

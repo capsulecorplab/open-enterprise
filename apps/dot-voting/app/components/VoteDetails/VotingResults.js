@@ -15,7 +15,7 @@ const VotingResults = ({ vote, voteWeights }) => {
   const [ totalSupport, setTotalSupport ] = useState(0)
   useEffect(() => {
     setTotalSupport(vote.data.options.reduce(
-      (total, option) => total + parseFloat(option.value, 10),
+      (total, option) => total + parseFloat(option.value),
       0
     ))
   }, [vote.data.options])

@@ -154,7 +154,7 @@ const FundForm = ({
       <Mutation mutation={COMMENT}>
         {(post, result) => (
           <Form
-            onSubmit={() => submitBounties(post, result)}
+            onSubmit={() => submitBounties()}
             description={description}
             submitText={issues.length > 1 ? 'Fund Issues' : 'Fund Issue'}
             submitDisabled={totalSize > tokenDetails.balance}
