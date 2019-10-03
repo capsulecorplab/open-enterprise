@@ -28,7 +28,7 @@ Cypress.Commands.add('getSiblings', { prevSubject: 'element' }, $element => {
   const siblings = []
   console.log('sibil', $element)
 
-  const sibling = $element.nextSibling
+  let sibling = $element.nextSibling
   for (; sibling; sibling = sibling.nextSibling) {
     if (sibling.nodeType !== 1 || sibling === elem) continue
     siblings.push(sibling)
